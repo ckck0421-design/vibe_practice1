@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>중등 필수 영어 단어 게임</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="game-container">
+        <h1>🎮 영단어 스피드 퀴즈</h1>
+        
+        <div class="dashboard">
+            <div class="info-box">점수: <span id="score">0</span> 점</div>
+            <div class="info-box">콤보: <span id="combo">0</span> 🔥</div>
+        </div>
+
+        <div id="game-box">
+            <div class="progress-bar-container">
+                <div id="progress-bar"></div>
+            </div>
+            <p class="instruction">다음 단어의 뜻을 맞추세요!</p>
+            <div id="word-display">apple</div>
+            
+            <div class="options-container">
+                <button class="option-btn" onclick="checkAnswer(0)">보기 1</button>
+                <button class="option-btn" onclick="checkAnswer(1)">보기 2</button>
+                <button class="option-btn" onclick="checkAnswer(2)">보기 3</button>
+                <button class="option-btn" onclick="checkAnswer(3)">보기 4</button>
+            </div>
+            <div id="feedback" class="feedback"></div>
+        </div>
+
+        <div id="result-box" class="hide">
+            <h2>🎉 게임 종료!</h2>
+            <p class="final-score">최종 점수: <span id="final-score">0</span>점</p>
+            
+            <h3>📊 오답 노트 및 학습 기록</h3>
+            <div id="history-log">
+                </div>
+            <button id="restart-btn" onclick="restartGame()">다시 도전하기</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
